@@ -10,11 +10,12 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Route} from '@angular/router/';
 import { FormsModule } from '@angular/forms';
 import { SessionDataService } from "./session-data/session-data.service";
+import { MyListingsComponent } from './my-listings/my-listings.component';
 
 const routes: Route[] = [
 
   {path: 'login', component: LoginComponent },
-  {path: '', component: ApartmentListingsComponent}
+  {path: 'my-listings', component: MyListingsComponent},{path: '', component: ApartmentListingsComponent}
 
 ];
 @NgModule({
@@ -23,7 +24,8 @@ const routes: Route[] = [
     NavigationComponent,
     ApartmentListingsComponent,
     AparmentDetailComponent,
-    LoginComponent
+    LoginComponent,
+    MyListingsComponent
   ],
   imports: [
     BrowserModule,
